@@ -1,0 +1,65 @@
+create database stgdb_rrevathy;
+CREATE TABLE stgdb_rrevathy.stg_cust_profile (
+    Address TEXT,
+    BranchID VARCHAR(50),
+    CustomerID VARCHAR(50),
+    DateOfBirth DATE,
+    Email VARCHAR(100),
+    FirstName VARCHAR(100),
+    LastName VARCHAR(100),
+    PhoneNumber VARCHAR(20)
+);
+
+CREATE TABLE stgdb_rrevathy.stg_branches (
+    Address TEXT,
+    BranchID VARCHAR(50),
+    BranchName VARCHAR(100),
+    City VARCHAR(100),
+    State VARCHAR(100),
+    Zipcode VARCHAR(20));
+
+CREATE TABLE stgdb_rrevathy.stg_employees (
+    BranchID VARCHAR(50),
+    EmployeeID VARCHAR(50),
+    FirstName VARCHAR(100),
+    Hiredate DATE,
+    LastName VARCHAR(100),
+    ManagerID VARCHAR(50),
+    Position VARCHAR(100));
+	
+create database odsdb_rrevathy;
+CREATE TABLE odsdb_rrevathy.ods_cust_profile (
+    Address TEXT,
+    BranchID VARCHAR(50),
+    CustomerID VARCHAR(50),
+    DateOfBirth DATE,
+    Email VARCHAR(100),
+    FirstName VARCHAR(100),
+    LastName VARCHAR(100),
+    PhoneNumber VARCHAR(20),
+    load_dt DATE,
+    load_ts TIMESTAMP
+);
+
+CREATE TABLE odsdb_rrevathy.ods_branches (
+    Address TEXT,
+    BranchID VARCHAR(50),
+    BranchName VARCHAR(100),
+    City VARCHAR(100),
+    State VARCHAR(100),
+    Zipcode VARCHAR(20),
+    load_dt DATE,
+    load_ts TIMESTAMP
+);
+
+CREATE TABLE odsdb_rrevathy.ods_employees (
+    BranchID VARCHAR(50),
+    EmployeeID VARCHAR(50),
+    FirstName VARCHAR(100),
+    Hiredate DATE,
+    LastName VARCHAR(100),
+    ManagerID VARCHAR(50),
+    Position VARCHAR(100),
+    load_dt DATE,
+    load_ts TIMESTAMP
+);
